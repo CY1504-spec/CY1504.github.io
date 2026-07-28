@@ -173,6 +173,10 @@ main {
     margin: 10px;
 }
 
+.clickable-img {
+    cursor: zoom-in;
+  }
+  
 footer {
     background-color: #e890a6;
 }

@@ -20,6 +20,7 @@
 
 <body>
     <header>
+        
         <div class="pattern">
             <div class="wrap">
                 <span class="title-name">MY-ART-WEB</span>
@@ -38,23 +39,44 @@
     <main>
         <div class="wrap">
             <div class="g_box">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="iii.jpg" class="clickable-img" alt>
+                <img src="mozya.jpg" class="clickable-img"alt>
             </div>
             <div class="g_box">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="niji.jpg" class="clickable-img"alt>
+                <img src="girl .jpg" class="clickable-img"alt>
             </div>
                 <div class="g_box">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <img src="ooo.jpg"class="clickable-img"alt>
+                    <img src="sen.jpg" class="clickable-img"alt>
                 
                 </div>
             </div>
-
+            <div class="img-modal">
+              <img class="modal-photo" src="" alt="">
+            </div>
+            <script>(function() {
+                var thumbs = document.querySelectorAll('.clickable-img');
+                var modal = document.querySelector('.img-modal');
+                var photo = document.querySelector('.modal-photo');
+              
+                if (!modal || !photo) return;
+              
+                document.body.appendChild(modal);
+              
+                thumbs.forEach(function(thumb) {
+                  thumb.addEventListener('click', function() {
+                    photo.src = thumb.src;
+                    modal.className = 'img-modal open';
+                  });
+                });
+              
+                modal.addEventListener('click', function() {
+                  modal.className = 'img-modal';
+                  photo.src = '';
+                });
+              })();</script>
+            
     </main>
 
     <footer>
@@ -63,7 +85,7 @@
                 <div class="footer-item">
                     <h3>MY-ART-WEB</h3>
                     <!-- ©︎は&copy; -->
-                    <h5>&copy; 2026 MY-ART-WEB. All rights reserved.</h5>
+                    <h5>&copy; 2026 MY-ART-WEB.</h5>
                 </div>
             </div>
         </div>
